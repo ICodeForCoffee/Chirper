@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper", "Chirper\Chirper.csproj", "{7D65406F-E6CB-4D55-A3DB-6A9E2CB169DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper.Test", "Chirper.Test\Chirper.Test.csproj", "{B609C375-F386-4B58-8B1A-BB83995B631E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D65406F-E6CB-4D55-A3DB-6A9E2CB169DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D65406F-E6CB-4D55-A3DB-6A9E2CB169DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D65406F-E6CB-4D55-A3DB-6A9E2CB169DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D65406F-E6CB-4D55-A3DB-6A9E2CB169DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B609C375-F386-4B58-8B1A-BB83995B631E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B609C375-F386-4B58-8B1A-BB83995B631E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B609C375-F386-4B58-8B1A-BB83995B631E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B609C375-F386-4B58-8B1A-BB83995B631E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A532F235-C8CF-4DC6-9860-E605FDC36837}
+	EndGlobalSection
+EndGlobal
