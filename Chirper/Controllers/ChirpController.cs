@@ -10,7 +10,7 @@ namespace Chirper.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching", "This is like a tweet"
+            "Hey, I love cheese", "Let's go sports team!", "This is like a tweet", "I'm tired."
         };
 
         private readonly ILogger<ChirpController> _logger;
