@@ -15,3 +15,24 @@
     <a href="https://localhost:7217/chirp/">Chirp response</a>
 
 </div>
+
+@section Scripts {
+    <script type="text/javascript">
+        
+        function loadFrame() {
+            const Http = new XMLHttpRequest();
+            const url = '/Chirp/';
+            Http.open("GET", url);
+            Http.send();
+            Http.onreadystatechange = (e) => {
+                console.log(Http.responseText)
+            }
+        }
+            
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadFrame();
+        });
+        
+    </script>
+}

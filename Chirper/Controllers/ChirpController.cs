@@ -20,7 +20,7 @@ namespace Chirper.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GetRecentChirps")]
         public IEnumerable<Chirp> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new Chirp
