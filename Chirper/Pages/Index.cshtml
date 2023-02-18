@@ -16,25 +16,41 @@
 
 </div>
 
+<div>
+</div>
+
+@{
+    /*
+     //Note for this code: https://medium.com/@Sharad35386442/6-different-ways-to-do-ajax-calls-in-javascript-b47200fe7a38
+     //https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started
+    */
+}
+
 @section Scripts {
     <script type="text/javascript">
-        //Note for this code: https://medium.com/@Sharad35386442/6-different-ways-to-do-ajax-calls-in-javascript-b47200fe7a38\
-        //https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started
+        
 
         function loadFrame() {
-            const Http = new XMLHttpRequest();
-            const url = '/Chirp/';
-            Http.open("GET", url);
-            Http.send();
-            Http.onreadystatechange = (e) => {
-                console.log(Http.responseText)
+            const httpRequest = new XMLHttpRequest();
+            httpRequest.open("GET", '/Chirp/', true);
+            httpRequest.send();
+            httpRequest.onreadystatechange = (e) => {
+                if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                    console.log(httpRequest.responseText)
+
+                    if (httpRequest.status === 200) {
+                        alert(httpRequest.responseText);
+                    } else {
+                        alert("Could now load Chirps.");
+                    }
+                }
             }
         }
-            
+
 
         document.addEventListener("DOMContentLoaded", () => {
             loadFrame();
         });
-        
+
     </script>
 }
