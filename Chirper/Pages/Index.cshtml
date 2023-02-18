@@ -36,17 +36,21 @@
             httpRequest.send();
             httpRequest.onreadystatechange = (e) => {
                 if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                    console.log("Loaded a Chrip data set.")
                     console.log(httpRequest.responseText)
 
                     if (httpRequest.status === 200) {
-                        alert(httpRequest.responseText);
+                        
+                        var response = hjttpRequest.responseText;
+                        //response.forEach(element ) //It's not an array, it's JSon.
+
+
                     } else {
                         alert("Could now load Chirps.");
                     }
                 }
             }
         }
-
 
         document.addEventListener("DOMContentLoaded", () => {
             loadFrame();
