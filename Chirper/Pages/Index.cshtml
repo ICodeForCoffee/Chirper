@@ -15,8 +15,10 @@
     <a href="https://localhost:7217/chirp/">Chirp response</a>
 
 </div>
+<br />
 
-<div>
+
+<div id="recentChirps">
 </div>
 
 @{
@@ -37,13 +39,21 @@
             httpRequest.onreadystatechange = (e) => {
                 if (httpRequest.readyState === XMLHttpRequest.DONE) {
                     console.log("Loaded a Chrip data set.")
-                    console.log(httpRequest.responseText)
+                    //console.log(httpRequest.responseText)
 
                     if (httpRequest.status === 200) {
                         
-                        var response = hjttpRequest.responseText;
+                        var chirps = httpRequest.responseText;
                         //response.forEach(element ) //It's not an array, it's JSon.
+                        console.log(chirps);
 
+                        JSON.parse(chirps).forEach(function (currentRecord) {
+                            
+                            console.log(currentRecord.messageText);
+                            //document.querySelector(".recentChirps").append("<p>" + currentRecord.messageText + "</p>");
+                            let p = document.createElement("p")
+                            document.getElementById("recentChirps").append(currentRecord.messageText, p);
+                        });
 
                     } else {
                         alert("Could now load Chirps.");
