@@ -42,14 +42,13 @@
                         var chirps = httpRequest.responseText;
 
                         JSON.parse(chirps).forEach(function (currentRecord) {
-                            
                             let p = document.createElement("p")
-                            document.getElementById("recentChirps").append(currentRecord.messageText, p);
-                            //Need to look into query selectors more.
-                            //document.querySelector(".recentChirps").append("<p>" + currentRecord.messageText + "</p>");
+                            //document.getElementById("recentChirps").append(currentRecord.messageText, p);
+                            document.querySelector("#recentChirps").append(currentRecord.messageText, p);
                         });
 
                     } else {
+                        //todo Add a real error message
                         alert("Could now load Chirps.");
                     }
                 }
