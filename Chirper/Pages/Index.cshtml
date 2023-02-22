@@ -41,9 +41,15 @@
                         var chirps = httpRequest.responseText;
 
                         JSON.parse(chirps).forEach(function (currentRecord) {
-                            let p = document.createElement("p")
+                            //let vs const?
+                            let div = document.createElement("div");
+                            let p = document.createElement("p");
+
+                            let newContent = document.createTextNode(currentRecord.messageText);
+                            div.appendChild(newContent);
+                            //div.append(currentRecord.created, p);
                             //document.getElementById("recentChirps").append(currentRecord.messageText, p);
-                            document.querySelector("#recentChirps").append(currentRecord.messageText, p);
+                            document.querySelector("#recentChirps").appendChild(div);
                         });
 
                     } else {
