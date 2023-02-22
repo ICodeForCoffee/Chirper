@@ -38,8 +38,8 @@ namespace Chirper.Controllers
             throw new NotImplementedException("Not yet implemented");
         }
 
-        [HttpPost(Name = "SendChirp")]
-        public void Send(int chripId)
+        [HttpPost(Name = "DeleteChirp")]
+        public void Delete(int chirpId)
         {
             throw new NotImplementedException("Not yet implemented");
         }
