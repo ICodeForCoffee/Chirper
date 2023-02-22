@@ -31,5 +31,11 @@ namespace Chirper.Controllers
             })
             .ToArray();
         }
+
+        [HttpPost(Name = "SendChirps")]
+        public void Send()
+        {
+            throw new NotImplementedException("Not yet implemented");
+        }
     }
 }
