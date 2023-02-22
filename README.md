@@ -7,5 +7,5 @@ WARNING: Chirper is a Web API demo project built in .NET 7. Thus, it does not im
 ### Feature Set
 
 * .NET 7
-* Entity Framework Core
+* Entity Framework Core (When I get to adding the database in this.)
 * Web AP
