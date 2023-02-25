@@ -8,7 +8,7 @@ namespace Chirper.Controllers
     [Route("[controller]")]
     public class ChirpController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private string[] Summaries = new[]
         {
             "Hey, I love cheese", "Let's go sports team!", "This is like a tweet", "I'm tired."
         };
@@ -35,6 +35,7 @@ namespace Chirper.Controllers
         [HttpPost(Name = "SendChirp")]
         public void Send(string messageText)
         {
+            //Summaries.
             throw new NotImplementedException("Not yet implemented");
         }
 

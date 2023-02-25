@@ -1,9 +1,13 @@
-﻿namespace Chirper.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Chirper.Models
 {
     public class Chirp
     {
-        public string? MessageText { get; set; }
-
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ChirpId { get; set; }
+        public string MessageText { get; set; }
+        public int UserId { get; set; }
         public DateTime Created { get; set; }
     }
 }
