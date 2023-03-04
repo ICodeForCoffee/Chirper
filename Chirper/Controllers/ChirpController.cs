@@ -8,16 +8,18 @@ namespace Chirper.Controllers
     [Route("[controller]")]
     public class ChirpController : ControllerBase
     {
-        private string[] Summaries = new[]
+        private string[] SummariesOld = new[]
         {
             "Hey, I love cheese", "Let's go sports team!", "This is like a tweet", "I'm tired."
         };
+        private List<string> Summaries;
 
         private readonly ILogger<ChirpController> _logger;
 
         public ChirpController(ILogger<ChirpController> logger)
         {
             _logger = logger;
+            Summaries = SummariesOld.ToList();
         }
 
         [HttpGet(Name = "GetRecentChirps")]
@@ -27,7 +29,9 @@ namespace Chirper.Controllers
             {
                 Created = DateTime.Now,
 
-                MessageText = Summaries[Random.Shared.Next(Summaries.Length)]
+                //MessageText = Summaries[Random.Shared.Next(Summaries.Length)]
+                MessageText = Summaries[Random.Shared.Next(Summaries.Count)]
+
             })
             .ToArray();
         }
@@ -35,8 +39,7 @@ namespace Chirper.Controllers
         [HttpPost(Name = "SendChirp")]
         public void Send(string messageText)
         {
-            //Summaries.
-            throw new NotImplementedException("Not yet implemented");
+            Summaries.Add(messageText);
         }
 
         [HttpPost(Name = "DeleteChirp")]
