@@ -10,8 +10,8 @@
 </div>
 
 <div class="newChirp">
-    <input  id="chirpText" type="text" />
-    <button>Post</button>
+    <input  id="" type="text" />
+    <button onclick="addChirp();">Post</button>
 </div>
 
 <br />
@@ -68,7 +68,19 @@
         }
 
         function addChirp() {
+            //const form = document.getElementById("form");
+            const formData = new FormData();
+            formData.append("messageText", "Some test for the moment");
+
             const httpRequest = new XMLHttpRequest();
+            httpRequest.open("POST", '/Chirp/Send/', true);
+            httpRequest.send(formData);
+            httpRequest.onreadystatechange = (e) => {
+                if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                    if (httpRequest.status === 200) {
+                    }
+                }
+            }
             //testees 
         }
 
