@@ -40,7 +40,7 @@
         
         function loadFrame() {
             const httpRequest = new XMLHttpRequest();
-            httpRequest.open("GET", '/Chirp/', true);
+            httpRequest.open("GET", '/Chirp/GetRecentChirps', true);
             httpRequest.send();
             httpRequest.onreadystatechange = (e) => {
                 if (httpRequest.readyState === XMLHttpRequest.DONE) {
