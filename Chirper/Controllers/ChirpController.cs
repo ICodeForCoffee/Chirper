@@ -36,10 +36,10 @@ namespace Chirper.Controllers
             .ToArray();
         }
 
-        [HttpPost(Name = "SendChirp")]
-        public void Send(string messageText)
+        [HttpPost(Name = "Chirp/SendChirp")]
+        public void Send(Chirp newChirp)
         {
-            Summaries.Add(messageText);
+            Summaries.Add(newChirp?.MessageText);
         }
 
         [HttpPost(Name = "DeleteChirp")]
