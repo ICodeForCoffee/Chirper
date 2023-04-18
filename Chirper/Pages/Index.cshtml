@@ -73,7 +73,7 @@
             formData.append("messageText", "Some test for the moment");
 
             const httpRequest = new XMLHttpRequest();
-            httpRequest.open("POST", '/Chirp/SendChirp/', true);
+            httpRequest.open("POST", '/Chirp/Post', true);
             httpRequest.send(formData);
             httpRequest.onreadystatechange = (e) => {
                 if (httpRequest.readyState === XMLHttpRequest.DONE) {

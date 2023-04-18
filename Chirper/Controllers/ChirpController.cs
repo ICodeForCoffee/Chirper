@@ -29,7 +29,6 @@ namespace Chirper.Controllers
             {
                 Created = DateTime.Now,
 
-                //MessageText = Summaries[Random.Shared.Next(Summaries.Length)]
                 MessageText = Summaries[Random.Shared.Next(Summaries.Count)]
 
             })
@@ -37,15 +36,15 @@ namespace Chirper.Controllers
         }
 
         [HttpPost(Name = "SendChirp")]
-        public void Send(Chirp newChirp)
+        public void Post(Chirp newChirp)
         {
             Summaries.Add(newChirp?.MessageText);
         }
 
-        [HttpPost(Name = "DeleteChirp")]
-        public void Delete(int id)
-        {
-            throw new NotImplementedException("Not yet implemented");
-        }
+        //[HttpPost(Name = "DeleteChirp")]
+        //public void Delete(int id)
+        //{
+        //    throw new NotImplementedException("Not yet implemented");
+        //}
     }
 }
