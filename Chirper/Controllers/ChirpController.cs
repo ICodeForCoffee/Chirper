@@ -36,14 +36,14 @@ namespace Chirper.Controllers
             .ToArray();
         }
 
-        [HttpPost(Name = "Chirp/SendChirp")]
+        [HttpPost(Name = "SendChirp")]
         public void Send(Chirp newChirp)
         {
             Summaries.Add(newChirp?.MessageText);
         }
 
         [HttpPost(Name = "DeleteChirp")]
-        public void Delete(int chirpId)
+        public void Delete(int id)
         {
             throw new NotImplementedException("Not yet implemented");
         }
