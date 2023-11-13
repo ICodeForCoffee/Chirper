@@ -1,6 +1,5 @@
 ﻿using Chirper.Models;
 using Microsoft.AspNetCore.Mvc;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Chirper.Controllers
 {
