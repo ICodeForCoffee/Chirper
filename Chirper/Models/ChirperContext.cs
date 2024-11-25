@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
+//todo Where am I putting the models if I'm moving the service out?
 namespace Chirper.Models
 {
     public class ChirperContext : DbContext
